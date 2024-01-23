@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript colorChanger() Hands-On</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: orange;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #colorDiv {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            border-radius: 10px;
+            transition: background-color 0.5s ease;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript colorChanger() Hands-On</h1>
+
+    <button id="colorButton">Click Me</button>
+    <div id="colorDiv"></div>
+
+    <script>
+        document.getElementById('colorButton').addEventListener('click', function () {
+            var colorDiv = document.getElementById('colorDiv');
+
+            if (colorDiv.style.backgroundColor === 'green') {
+                colorDiv.style.backgroundColor = 'blue';
+            } else {
+                colorDiv.style.backgroundColor = 'green';
+            }
+        });
+    </script>
+</body>
+</html>
